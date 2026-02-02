@@ -1,0 +1,41 @@
+env:
+  name: "CartPole-v1"
+  max_episode_steps: 500
+  render_mode: null
+  seed: null
+
+dataset:
+  num_episodes: 2000
+  behavior_policy: "expert"
+  epsilon: 0.1
+  save_path: "data/expert_dataset.h5"
+  load_existing: false
+
+algorithm:
+  name: "cql"
+  learning_rate: 0.0001
+  batch_size: 512
+  hidden_dims: [512, 512]
+  activation: "relu"
+  dropout: 0.1
+  
+  # Algorithm-specific parameters
+  bcq_threshold: 0.3
+  cql_alpha: 2.0
+  iql_temperature: 3.0
+  iql_expectile: 0.8
+
+training:
+  num_epochs: 1000
+  eval_frequency: 25
+  save_frequency: 50
+  log_frequency: 5
+  device: "auto"
+  seed: 42
+  deterministic: true
+
+evaluation:
+  num_eval_episodes: 20
+  eval_seed: 123
+  compute_ope: true
+  ope_methods: ["ips", "dr", "snips"]

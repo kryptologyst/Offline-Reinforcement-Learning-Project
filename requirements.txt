@@ -1,0 +1,32 @@
+# Core dependencies
+gymnasium>=0.29.0
+numpy>=1.24.0
+pandas>=2.0.0
+torch>=2.0.0
+tqdm>=4.65.0
+pyyaml>=6.0
+matplotlib>=3.7.0
+tensorboard>=2.13.0
+
+# Offline RL specific
+d4rl>=1.1
+imitation>=0.4.0
+stable-baselines3>=2.0.0
+
+# Data handling
+h5py>=3.9.0
+pytables>=3.8.0
+
+# Visualization and demos
+streamlit>=1.25.0
+plotly>=5.15.0
+
+# Development and testing
+black>=23.0.0
+ruff>=0.0.280
+pytest>=7.4.0
+pytest-cov>=4.1.0
+
+# Optional: Advanced features
+wandb>=0.15.0
+optuna>=3.2.0
